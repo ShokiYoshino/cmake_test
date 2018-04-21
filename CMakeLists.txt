@@ -1,0 +1,26 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+PROJECT (CvViewer)
+
+
+
+#事前定義マクロ
+#SET(SYMBOLES "-DSYMBOLE" .... )
+
+SET(CFLAGS "${CFLAGS} -std=gnu11 -pthread ${SYMBOLES}")
+SET(CXXFLAGS "${CXXFLAGS} -std=gnu++11 -pthread ${SYMBOLES}")
+SET(CMAKE_C_FLAGS ${CMAKE_C_FLAGS} ${CFLAGS})
+SET(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} ${CXXFLAGS})
+
+
+INCLUDE_DIRECTORIES ("${CMAKE_CURRENT_SOURCE_DIR}/src")
+ADD_EXECUTABLE(vs_test.out 
+    src/main.cpp
+)
+
+
+
+
+
+
+
+
